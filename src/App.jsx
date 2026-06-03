@@ -1,15 +1,14 @@
 import Book from "./component/Book";
 import { AudioProvider } from "./context/AudioContext";
-
+import OrientationGate from "./component/OrientationGate";
 function App() {
-
   return (
     <>
-    <AudioProvider>
-
-      <Book />
-          </AudioProvider>
-
+    <OrientationGate>
+      <AudioProvider>
+        <Book />
+      </AudioProvider>
+      </OrientationGate>
     </>
   );
 }
