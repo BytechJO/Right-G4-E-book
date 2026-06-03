@@ -6,8 +6,8 @@ import BottomBar from "./Book/Navbar/BottomBar";
 import LeftSidebar from "./Book/Sidebars/LeftSidebar";
 import RightSidebar from "./Book/Sidebars/RightSidebar";
 // === cover img ===
-import workbookCover from "../assets/imgs/pages/workbook-cover.jpg";
-import stbookCover from "../assets/imgs/pages/classbook-cover.jpg";
+import workbookCover from "../assets/imgs/pages/covers/G4 Cover WB.png";
+import stbookCover from "../assets/imgs/pages/covers/G4 Cover SB.png";
 // import teacherBookCover from "../assets/imgs/pages/classbook-cover.jpg";
 
 // === VIEWERS ===
