@@ -1,0 +1,24 @@
+.headset-icon-CD-unit3-page2-1,
+.click-icon-unit3-page2-1,
+.headset-icon-CD-unit3-page2-2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  position: absolute;
+  padding: 5px;
+}
+
+.headset-icon-CD-unit3-page2-1 {
+  top: 6.5%;
+  right: 69%;
+}
+
+.headset-icon-CD-unit3-page2-2 {
+  bottom: 28.5%;
+  left: 45.5%;
+}
+
+.click-icon-unit3-page2-1 {
+  bottom: 11%;
+  right: 37%;
+}

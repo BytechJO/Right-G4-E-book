@@ -1,0 +1,25 @@
+
+/*===========page9==================*/
+.headset-icon-CD-page9 {
+  position: absolute;
+  padding: 5px;
+  bottom: 30%;
+  left: 24.8%;
+  cursor: pointer;
+}
+
+.click-icon-page9-1 {
+    position: absolute;
+    padding: 5px;
+    top: 2%;
+    left: 48.2%;
+    cursor: pointer;
+}
+
+.click-icon-page9-2 {
+    position: absolute;
+    padding: 5px;
+    top: 64.5%;
+    left: 38.2%;
+    cursor: pointer;
+}

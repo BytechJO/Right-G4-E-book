@@ -1,0 +1,140 @@
+
+
+.unscramble-row-wb-unit1-p8-q1 {
+  display: grid;
+  gap: 50px;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.img-box-wb-unit1-p8-q1 img {
+  width: 90px;
+  height: 90px;
+  /* object-fit: fill; */
+}
+
+
+
+.error-icon-wb-unit1-p8-q1 {
+  position: absolute;
+  right: -12px; /* يظهر بجانب الصندوق */
+  top: -3%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.wrong-line {
+  border-bottom: 3px solid red;
+}
+.wb-unit7-p2-q2{
+  top: 100px;
+  position: fixed!important; 
+}
+
+.q1-1 {
+position: absolute !important;
+    padding: 5px !important;
+    top: 13.5% !important;
+    left: 39.5% !important;
+}
+
+.q2-1 {
+ position: absolute !important;
+    padding: 5px !important;
+     top: 63% !important;
+    left: 43.5% !important;
+
+}
+
+
+.q3-1 {
+  position: absolute !important;
+    padding: 5px !important;
+   top: 3% !important;
+    left: 48.5% !important;
+}
+
+.q4-1{
+position: absolute !important;
+    padding: 5px !important;
+    top: 63.5% !important;
+    left: 50.5% !important
+}
+
+.q5-1 {
+position: absolute !important;
+    padding: 5px !important;
+    top: 3% !important;
+    left: 45.5% !important;
+
+}
+
+.q6-1 {
+position: absolute !important;
+    padding: 5px !important;
+    top: 40% !important;
+    left: 18.5% !important;
+
+}
+
+.q7-1 {
+    position: absolute !important;
+    padding: 5px !important;
+    top: 3% !important;
+    left: 53.5% !important;
+}
+
+.q8-1 {
+    position: absolute !important;
+    padding: 5px !important;
+    top: 52% !important;
+    left: 56.5% !important;
+
+}
+
+.q9-1 {
+  position: absolute !important;
+  padding: 5px !important;
+    top: 3% !important;
+    left: 31% !important;
+}
+
+.q10-1 {
+ position: absolute !important;
+    padding: 5px !important;
+       top: 41% !important;
+    left: 41.5% !important;
+}
+
+.q11-1 {
+    position: absolute !important;
+    padding: 5px !important;
+    top: 2.5% !important;
+    left: 45% !important;
+}
+
+
+.q12-1 {
+position: absolute !important;
+    padding: 5px !important;
+    top: 39.5% !important;
+    left: 42% !important;
+}
+
+.q13-1{
+    position: absolute !important;
+    padding: 5px !important;
+    top: -700% !important;
+    left: 41% !important;
+}

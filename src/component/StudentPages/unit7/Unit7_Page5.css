@@ -1,0 +1,133 @@
+.headset-icon-CD-unit7-page5 {
+  position: absolute;
+  padding: 5px;
+  top: 9%;
+  right: 11.5%;
+  cursor: pointer;
+}
+
+/* EDIT: علامة الخطأ فقط */
+.wrong-x2 {
+  position: absolute;
+  top: -11px;
+  right: -22px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pop 0.2s ease-in-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.check-box1 {
+  transition: transform 0.25s ease;
+}
+
+.check-box1.selected1 {
+  transform: scale(1.28);
+}
+
+.click-icon-unit7-page5-1 {
+      position: absolute;
+    padding: 5px;
+    top: 8.5%;
+    right: 53.5%;
+    cursor: pointer;
+}
+.click-icon-unit7-page5-2 {
+    position: absolute;
+    padding: 5px;
+    bottom: 64%;
+    right: 52.5%;
+    cursor: pointer;
+}
+.click-icon-unit7-page5-3 {
+position: absolute;
+    padding: 5px;
+    top: 64.6%;
+    left: 34.5%;
+    cursor: pointer;
+}
+
+.click-icon-unit7-page5-4 {
+    position: absolute;
+    padding: 5px;
+    bottom: 16.5%;
+    left: 35.8%;
+    cursor: pointer;;
+}
+
+/* ============================= */
+/*      RESPONSIVE DESIGN        */
+/* ============================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .click-icon-unit7-page5-1 {
+    top: 7.5% !important;
+    right: 17.5% !important;
+  }
+  .click-icon-unit7-page5-2 {
+    bottom: 24.5% !important;
+    right: 22% !important;
+  }
+  .click-icon-unit7-page5-3 {
+    top: 44.5% !important;
+    left: 32% !important;
+  }
+  .click-icon-unit7-page5-4 {
+    bottom: 24% !important;
+    left: 50.5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .click-icon-unit7-page5-1 {
+    top: 7.5%;
+    right: 22.5%;
+  }
+  .click-icon-unit7-page5-2 {
+    bottom: 24.8%;
+    right: 27%;
+  }
+
+  .click-icon-unit7-page5-3 {
+    top: 45.5%;
+    left: 32.5%;
+  }
+  .click-icon-unit7-page5-4 {
+    bottom: 27%;
+
+    left: 50.5%;
+  }
+}
+
+@media (max-width: 820px) {
+  .click-icon-unit7-page5-1 {
+    top: 8.5%;
+    right: 21.5%;
+  }
+  .click-icon-unit7-page5-2 {
+    top: 25.8%;
+    right: 26%;
+  }
+  .click-icon-unit7-page5-4 {
+    bottom: 26%;
+    left: 50.5%;
+  }
+}

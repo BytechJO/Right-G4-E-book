@@ -1,0 +1,113 @@
+/* WRAPPER */
+.RCU-unit-read-choose-wrapper {
+  border: 3px solid #ff6b6b;
+  border-radius: 18px;
+  padding: 20px 24px;
+  background: #fff3ea;
+  max-width: 560px;
+}
+
+/* TITLE */
+.RCU-unit-read-choose-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #24408f;
+}
+
+/* QUESTION ROW */
+.RCU-unit-read-choose-question {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+/* NUMBER */
+.RCU-unit-read-choose-q-number {
+  font-weight: 700;
+   font-size: 20px;
+}
+
+/* TEXT */
+.RCU-unit-read-choose-q-text {
+  flex: 1;
+  font-size: 20px;
+}
+
+/* OPTIONS CONTAINER */
+.RCU-unit-read-choose-options {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* OPTION */
+.RCU-unit-read-choose-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* CIRCLE */
+.RCU-unit-read-choose-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+/* OPTION TEXT */
+.RCU-unit-read-choose-option-text {
+  font-weight: 600;
+}
+
+/* SELECTED STATE */
+.RCU-unit-read-choose-option-selected
+  .RCU-unit-read-choose-circle {
+  background: #4d6cff;
+  color: #fff;
+  border-color: #4d6cff;
+}
+
+
+/* CHECK BUTTON */
+.RCU-unit-read-choose-check-btn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* SELECTED */
+.RCU-selected
+  .RCU-unit-read-choose-circle {
+  background: #e0e7ff;
+}
+
+/* CORRECT */
+.RCU-correct
+  .RCU-unit-read-choose-circle {
+  background: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+/* WRONG */
+.RCU-wrong
+  .RCU-unit-read-choose-circle {
+  background: #f44336;
+  border-color: #f44336;
+  color: white;
+}

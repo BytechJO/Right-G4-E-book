@@ -1,0 +1,148 @@
+.vocab_container_poster_vocab {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  width: 146px;
+}
+.poster-grammar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.poster-wrapper {
+  position: relative;
+  width: 100%;
+  /* height: 80vh; */
+  aspect-ratio: 1484 / 1023;
+  /* background-size: contain; */
+  min-height: 75vh; /* 👈 يمنع الاختفاء */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top left;
+}
+.audio-btn-poster-con-1 {
+    position: absolute;
+    top: 0%;
+    right: 4%;
+    cursor: pointer;
+    z-index: 10;
+    width: 24px;
+    height: 28px;
+
+}
+
+.audio-btn-poster-con-2 {
+     position: absolute;
+    top: 0%;
+    right: 0.5%;
+    cursor: pointer;
+    z-index: 10;
+    width: 24px;
+    height: 28px;
+
+}
+.audio-btn-poster-con-3 {
+position: absolute;
+    top: 3%;
+    right: 24%;
+    cursor: pointer;
+    z-index: 10;
+    width: 24px;
+    height: 28px;
+
+}
+
+.audio-btn-poster-con-4 {
+    position: absolute;
+    top: 4%;
+    right: 22%;
+    cursor: pointer;
+    z-index: 10;
+    width: 24px;
+    height: 28px;
+
+}
+.audio-btn-poster-voc {
+    position: absolute;
+    top: 9%;
+    right: 74.5%;
+    cursor: pointer;
+    z-index: 10;
+    width: 24px;
+    height: 28px;
+
+}
+.audio-btn-poster-con-1  svg, 
+.audio-btn-poster-con-2 svg , 
+.audio-btn-poster-con-3  svg, 
+.audio-btn-poster-con-4 svg , 
+.audio-btn-poster-voc svg
+{
+  width: 100%;
+  height: 100%;
+}
+
+.audio-btn-poster:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1180px) {
+  .vocab_container_poster_vocab {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .poster-grammar-img {
+    height: 48vh;
+    width: auto;
+  }
+  .vocab_container_poster_vocab {
+    font-size: 20px;
+  }
+}
+/* @media (max-height: 800px) {
+.vocab_container_poster_vocab {
+   
+    font-size: 18px;
+}
+} */
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .poster-grammar-img {
+    height: 90vh;
+    width: auto;
+  }
+  .vocab_container_poster_vocab {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 820px) {
+  .vocab_container_poster_vocab {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 770px) {
+  .vocab_container_poster_vocab {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .vocab_container_poster_vocab {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster-grammar-img {
+    height: 37vh;
+    width: auto;
+  }
+ 
+  .vocab_container_poster_vocab {
+    font-size: 7px;
+  }
+}

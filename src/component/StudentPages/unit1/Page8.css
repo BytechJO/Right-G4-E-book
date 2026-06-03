@@ -1,0 +1,49 @@
+
+/*===========page8==================*/
+.headset-icon-CD-page8 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 3px; */
+  padding: 5px;
+  top: 8%;
+  right: 4%;
+  cursor: pointer;
+}
+
+.click-icon-page8-1 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 3px; */
+  padding: 5px;
+top: 8%;
+    right: 31.4%;
+    cursor: pointer;
+}
+.click-icon-page8-2 {
+    position: absolute;
+    padding: 5px;
+    top: 32%;
+    left: 38%;
+    cursor: pointer;
+}
+.click-icon-page8-3 {
+    position: absolute;
+    padding: 5px;
+    top: 47.2%;
+    left: 41.5%;
+    cursor: pointer;
+}
+
+.click-icon-page8-4 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 3px; */
+  padding: 5px;
+  bottom: 18.5%;
+  left: 36.2%;
+  cursor: pointer;
+}
+

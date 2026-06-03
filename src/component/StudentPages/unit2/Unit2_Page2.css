@@ -1,0 +1,96 @@
+
+/*===========page5============*/
+
+.headset-icon-CD-page5 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 2px; */
+  padding: 5px;
+  cursor: pointer;
+}
+
+#CD-1-page5 {
+  top: 3%;
+  right: 4%;
+}
+
+#CD-2-page5 {
+  bottom: 30.5%;
+  right: 9.2%;
+}
+
+#num-2-page5 {
+  top: 46%;
+  left: 8%;
+}
+
+#num-3-page5 {
+  top: 43%;
+  left: 34%;
+}
+
+.click-icon-page5 {
+position: absolute;
+    padding: 5px;
+    /* bottom: 14%; */
+    left: 20%;
+    top: 4%;
+    cursor: pointer;
+}
+.headset-icon-CD-page5-1 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 3px; */
+  padding: 5px;
+    top: 15.5%;
+    left: 26.5%;
+    cursor: pointer;
+}
+.headset-icon-CD-page5-2 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 3px; */
+  padding: 5px;
+  top: 66.1%;
+  left: 42.5%;
+  cursor: pointer;
+}
+#t {
+  color: darkblue !important;
+  font-size: 30px;
+  position: absolute;
+  top: 45%;
+  left: 18.5%;
+}
+
+#tiger {
+  bottom: 28%;
+  right: 15%;
+}
+
+#taxi {
+  bottom: 28%;
+  left: 54%;
+}
+
+#table {
+  bottom: 28%;
+  left: 31%;
+}
+
+#text-0 {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  font-size: 43px;
+}
+#text-1 {
+  cursor: pointer;
+  font-size: 43px;
+  position: absolute;
+  right: 20%;
+  top: 30%;
+}

@@ -1,0 +1,74 @@
+/*===========page 6 ====================*/
+
+.headset-icon-CD-page6 {
+    position: absolute;
+    padding: 5px;
+    top: 4%;
+    left: 21.5%;
+    cursor: pointer;
+}
+
+.clickable-area {
+  position: absolute;
+  cursor: pointer;
+}
+.pauseBtn-icon-CD-page6 {
+  position: absolute;
+  padding: 5px;
+  top: 2.5%;
+  left: 40.2%;
+  cursor: pointer;
+}
+
+.headset-icon-CD-page6-1 {
+  position: absolute;
+  padding: 5px;
+  top: 30%; /* عدلها حسب مكانها بالصورة */
+  left: 40%; /* عدلها حسب المكان */
+  cursor: pointer;
+}
+.headset-icon-CD-page6-2 {
+    position: absolute;
+    padding: 5px;
+    top: 74.7%;
+    left: 24%;
+    cursor: pointer;
+}
+.headset-icon-CD-page6-3 {
+  position: absolute;
+  padding: 5px;
+  bottom: 10%; /* عدلها حسب مكانها بالصورة */
+  left: 60%; /* عدلها حسب المكان */
+  cursor: pointer;
+}
+.headset-icon-CD-page5 {
+  position: absolute;
+  /* background-color: #6bcff6;
+  border-radius: 20px;
+  border: rgb(255, 255, 255) solid 2px; */
+  padding: 5px;
+  cursor: pointer;
+}
+.header-title-page8-read {
+    font-size: 20px;
+    font-family: "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+    color: #2096a6;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    white-space: nowrap;
+    width: 70%;
+    margin-bottom: 2;
+}
+
+.ex-A-read {
+    background: #99c0cb;
+    font-family: "Gill Sans MT", "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
