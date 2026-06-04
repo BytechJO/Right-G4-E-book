@@ -36,6 +36,11 @@ export default function BottomBar({
   const [offlineReady, setOfflineReady] = useState(
     localStorage.getItem("offline-ready") === "true",
   );
+  const cancelOfflineDownload = () => {
+    navigator.serviceWorker.controller?.postMessage({
+      type: "CANCEL_PRELOAD",
+    });
+  };
   useEffect(() => {
     const onMessage = (event) => {
       if (event.data?.type === "PRELOAD_PROGRESS") {
@@ -54,6 +59,15 @@ export default function BottomBar({
         localStorage.setItem("offline-ready", "true");
         localStorage.setItem("offline-downloading", "false");
         localStorage.setItem("offline-progress", "100");
+      }
+      if (event.data?.type === "PRELOAD_CANCELLED") {
+        setDownloading(false);
+        setProgress(0);
+        setOfflineReady(false);
+
+        localStorage.setItem("offline-downloading", "false");
+        localStorage.setItem("offline-progress", "0");
+        localStorage.setItem("offline-ready", "false");
       }
     };
 
@@ -276,14 +290,15 @@ export default function BottomBar({
       )}
 
       {downloading && (
-        <div
+        <button
           className="flex items-center gap-1 px-2 py-1
                text-[#430f68] text-xs"
+          onClick={cancelOfflineDownload}
           title="جاري تحميل الكتاب"
         >
           <MdOutlineWifiOff size={22} className="animate-pulse" />
           <span>{progress}%</span>
-        </div>
+        </button>
       )}
 
       {offlineReady && (

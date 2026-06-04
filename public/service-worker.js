@@ -1,13 +1,16 @@
 const CACHE_NAME = "RightG4Ebook";
 const OFFLINE_FALLBACK = "/index.html";
 
-// 🔹 INSTALL: خزّن الصفحة الرئيسية
+let cancelDownload = false;
+
+// 🔹 INSTALL
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
       cache.addAll([OFFLINE_FALLBACK])
     )
   );
+
   self.skipWaiting();
 });
 
@@ -21,7 +24,7 @@ self.addEventListener("fetch", (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // 🟢 React SPA navigation + Refresh
+  // React SPA navigation
   if (request.mode === "navigate") {
     event.respondWith(
       caches.match(OFFLINE_FALLBACK).then((cached) => {
@@ -31,39 +34,50 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // 🟢 ملفات من نفس الموقع
-  if (request.method === "GET" && url.origin === self.location.origin) {
-  event.respondWith(
-    caches.open(CACHE_NAME).then(async (cache) => {
-      const cached = await cache.match(request);
-      if (cached) return cached;
+  // ملفات من نفس الموقع
+  if (
+    request.method === "GET" &&
+    url.origin === self.location.origin
+  ) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async (cache) => {
+        const cached = await cache.match(request);
 
-      try {
-        const response = await fetch(request);
+        if (cached) return cached;
 
-        // ⛔ لا نخزّن 206
-        if (response.status === 200) {
-          cache.put(request, response.clone());
+        try {
+          const response = await fetch(request);
+
+          // لا نخزن partial content
+          if (response.status === 200) {
+            cache.put(request, response.clone());
+          }
+
+          return response;
+        } catch (err) {
+          return cache.match(request);
         }
-
-        return response;
-      } catch (err) {
-        return cache.match(request);
-      }
-    })
-  );
-}
-
+      })
+    );
+  }
 });
 
-
-// 📩 استقبل رسالة من الموقع
+// 📩 MESSAGE
 self.addEventListener("message", async (event) => {
+
+  // ❌ إلغاء التنزيل
+  if (event.data?.type === "CANCEL_PRELOAD") {
+    cancelDownload = true;
+    return;
+  }
+
+  // 📥 بدء التنزيل
   if (event.data?.type !== "PRELOAD_ALL") return;
+
+  cancelDownload = false;
 
   const assets = event.data.assets;
 
-  // حماية إضافية
   if (!Array.isArray(assets)) {
     console.error("PRELOAD_ALL assets is not an array:", assets);
     return;
@@ -75,18 +89,47 @@ self.addEventListener("message", async (event) => {
   const total = assets.length;
 
   for (const url of assets) {
+
+    // ❌ فحص الإلغاء
+    if (cancelDownload) {
+
+      cancelDownload = false;
+
+      // حذف الملفات التي تم تنزيلها
+      await caches.delete(CACHE_NAME);
+
+      // إعادة إنشاء الكاش الأساسي
+      const freshCache = await caches.open(CACHE_NAME);
+
+      try {
+        await freshCache.addAll([OFFLINE_FALLBACK]);
+      } catch (e) {
+        console.error(e);
+      }
+
+      const clients = await self.clients.matchAll();
+
+      clients.forEach((client) => {
+        client.postMessage({
+          type: "PRELOAD_CANCELLED",
+        });
+      });
+
+      return;
+    }
+
     try {
+
       const response = await fetch(url);
 
-      // ⛔ لا نخزّن Partial
       if (response.status === 200) {
         await cache.put(url, response.clone());
       }
 
       loaded++;
 
-      // progress
       const clients = await self.clients.matchAll();
+
       clients.forEach((client) => {
         client.postMessage({
           type: "PRELOAD_PROGRESS",
@@ -94,15 +137,18 @@ self.addEventListener("message", async (event) => {
           total,
         });
       });
+
     } catch (e) {
       console.error("Failed to cache:", url);
     }
   }
 
-  // خلصنا
+  // ✅ انتهى التنزيل
   const clients = await self.clients.matchAll();
+
   clients.forEach((client) => {
-    client.postMessage({ type: "PRELOAD_DONE" });
+    client.postMessage({
+      type: "PRELOAD_DONE",
+    });
   });
 });
-
