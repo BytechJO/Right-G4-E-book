@@ -541,6 +541,11 @@ img {
     width: 22px;
     height: 23px;
   } */
+
+
+   .div-forall{
+    width: 75%;
+  }
 }
 @media screen and (max-width: 1367px) and (max-height: 1024px) {
     .circle-area {
