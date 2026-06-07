@@ -72,7 +72,7 @@ const ReadingSection = ({
 
       <div className="mt-3 space-y-6 w-[100%] mb-3">
         <div className="flex items-center gap-4">
-          <SectionBanner title="Comprehension" />
+          {/* <SectionBanner title="Comprehension" />
           <h2
             style={{
               display: "flex",
@@ -81,7 +81,7 @@ const ReadingSection = ({
               marginLeft: "auto",
             }}
             className="font-bold text-[18px] text-black"
-          ></h2>
+          ></h2> */}
         </div>
       </div>
     </div>

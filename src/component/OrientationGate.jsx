@@ -10,7 +10,7 @@ export default function OrientationGate({ children }) {
     return (
       <div style={styles.container}>
         <div style={{ fontSize: "48px" }}>📖</div>
-        <h2 style={styles.title}> Right G2 Interactive Book</h2>
+        <h2 style={styles.title}> Right G4 Interactive Book</h2>
         <p style={styles.text}>click to start</p>
         <button onClick={requestPermission} style={styles.button}>
           start ▶

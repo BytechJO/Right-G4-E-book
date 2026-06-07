@@ -74,7 +74,7 @@ const stopAtSecond = 2.32;
  
        <div className=" mt-2 space-y-10 w-[60%] ">
           <GrammarA />
-          <GrammarB />
+          {/* <GrammarB /> */}
           {/* <GrammarC /> */}
 
         </div>

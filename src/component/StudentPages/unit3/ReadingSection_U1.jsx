@@ -67,8 +67,8 @@ const captions = [
 
  </div>
       <div className="w-[60%] mt-4 space-y-6 mb-7">
-        <ComprehensionA />
-        <ComprehensionB />
+        {/* <ComprehensionA />
+        <ComprehensionB /> */}
       </div>
      
     </div>

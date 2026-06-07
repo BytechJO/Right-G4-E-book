@@ -27,8 +27,8 @@ const GrammarSection_U1 = () => {
 
 
        <div className=" mt-7 space-y-10 w-[60%] ">
-          <WritingA />
-          <WritingB />
+          {/* <WritingA />
+          <WritingB /> */}
           
         </div>
     </div>

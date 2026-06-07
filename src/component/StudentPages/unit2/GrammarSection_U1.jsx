@@ -73,8 +73,8 @@ const stopAtSecond =  2.20;
       </div>
        <div className=" mt-2 space-y-10 w-[60%] ">
           <GrammarA />
-          <GrammarB />
-          <GrammarC />
+          {/* <GrammarB />
+          <GrammarC /> */}
         </div>
     </div>
   );

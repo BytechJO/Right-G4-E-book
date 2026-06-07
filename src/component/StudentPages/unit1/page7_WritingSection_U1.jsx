@@ -19,8 +19,8 @@ const WritingSection_U1 = () => {
           style={{ width: "60%", height: "auto", objectFit: "contain" , alignSelf :"center" }}
         /></div>
         <div className="flex flex-col gap-6 ">
-        <WritingA />
-        <WritingB />
+        {/* <WritingA />
+        <WritingB /> */}
       </div>
     </div>
   );
